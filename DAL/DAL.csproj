@@ -53,9 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\StaffContext.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Guest.cs" />
+    <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomType.cs" />
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
