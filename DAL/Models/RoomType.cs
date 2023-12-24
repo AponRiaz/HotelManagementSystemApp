@@ -19,9 +19,17 @@ namespace DAL.Models
         public string Description { get; set; }
 
         [Required]
-        public int PricePerNight { get; set; }
+        public string PricePerNight { get; set; }
 
         [Required]
-        public int Capacity { get; set; }
+        public string Capacity { get; set; }
+
+
+        public virtual ICollection<Room> RoomTypes { get; set; }
+
+        public RoomType()
+        {
+            RoomTypes = new List<Room>();
+        }
     }
 }

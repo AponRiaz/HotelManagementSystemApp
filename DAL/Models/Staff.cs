@@ -12,8 +12,6 @@ namespace DAL.Models
     {
         [Key]
         public int StaffID { get; set; }
-
-
         [ForeignKey("Hotel")]
         public int HotelID { get; set; }
 
@@ -27,7 +25,7 @@ namespace DAL.Models
         public string Position { get; set; }
 
         [Required]
-        public int Salary { get; set; }
+        public string Salary { get; set; }
 
         [Required]
         public DateTime DateOfBirth { get; set; }
@@ -43,5 +41,4 @@ namespace DAL.Models
 
         public virtual Hotel Hotel { get; set; }
     }
-
 }

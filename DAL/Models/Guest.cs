@@ -13,6 +13,15 @@ namespace DAL.Models
         public int GuestID { get; set; }
 
         [Required]
+        public string UserName { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public string UserType { get; set; }
+
+        [Required]
         public string FirstName { get; set; }
 
         [Required]
@@ -29,5 +38,13 @@ namespace DAL.Models
 
         [Required]
         public string Email { get; set; }
+
+
+        public virtual ICollection<Booking> Guests { get; set; }
+
+        public Guest()
+        {
+            Guests = new List<Booking>();
+        }
     }
 }
