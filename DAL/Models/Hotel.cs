@@ -34,7 +34,6 @@ namespace DAL.Models
         public DateTime CheckoutTime { get; set; }
 
 
-  
         public virtual ICollection<Room> Hotels { get; set; }
 
         public Hotel()
