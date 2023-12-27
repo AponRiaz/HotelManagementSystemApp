@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class StaffRepo : Repo, IRepo<Staff, int, Staff>
+
+    internal class GuestRepo : Repo, IRepo<Guest, int, Guest>
     {
-        public Staff Create(Staff obj)
+        public Guest Create(Guest obj)
         {
-            db.Staffs.Add(obj);
+            db.Guests.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
@@ -20,42 +21,51 @@ namespace DAL.Repos
         public bool Delete(int id)
         {
             var ex = Read(id);
-            db.Staffs.Remove(ex);
+            db.Guests.Remove(ex);
             return db.SaveChanges() > 0;
         }
 
-        public List<Staff> Read()
+        public List<Guest> Read()
         {
-            return db.Staffs.ToList();
+            return db.Guests.ToList();
         }
 
-        public Staff Read(int id)
+        public Guest Read(int id)
         {
-            return db.Staffs.Find(id);
+            return db.Guests.Find(id);
         }
 
-        public Staff Update(Staff obj)
+        public Guest Update(Guest obj)
         {
-            var ex = Read(obj.StaffID);
+            var ex = Read(obj.GuestID);// Update 
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
 
-        public Staff Update(Type obj)
+        Guest IRepo<Guest, int, Guest>.Create(Guest obj)
         {
             throw new NotImplementedException();
         }
 
-        List<Type> IRepo<Staff, int, Staff>.Read()
+        bool IRepo<Guest, int, Guest>.Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        Type IRepo<Staff, int, Staff>.Read(int id)
+        List<Type> IRepo<Guest, int, Guest>.Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        Type IRepo<Guest, int, Guest>.Read(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Guest IRepo<Guest, int, Guest>.Update(Type obj)
         {
             throw new NotImplementedException();
         }
     }
-
 }

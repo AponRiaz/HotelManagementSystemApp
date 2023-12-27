@@ -8,65 +8,63 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    class HotelRepo : Repo, IRepo<Hotel, int, Hotel>
+
+    internal class BookingRepo : Repo, IRepo<Booking, int, Booking>
     {
-        public Hotel Create(Hotel obj)
+        public Booking Create(Booking obj)
         {
-            db.Hotels.Add(obj);
-
+            db.Bookings.Add(obj);
             if (db.SaveChanges() > 0) return obj;
-
             return null;
         }
-
 
         public bool Delete(int id)
         {
             var ex = Read(id);
-            db.Hotels.Remove(ex);
+            db.Bookings.Remove(ex);
             return db.SaveChanges() > 0;
         }
 
-        public List<Hotel> Read()
+        public List<Booking> Read()
         {
-            return db.Hotels.ToList();
+            return db.Bookings.ToList();
         }
 
-        public Hotel Read(int id)
+        public Booking Read(int id)
         {
-            return db.Hotels.Find(id);
+            return db.Bookings.Find(id);
         }
 
-        public Hotel Update(Hotel obj)
+        public Booking Update(Booking obj)
         {
-            var ex = Read(obj.HotelID);// Update 
+            var ex = Read(obj.BookingID);
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
 
         }
 
-        Hotel IRepo<Hotel, int, Hotel>.Create(Hotel obj)
+        Booking IRepo<Booking, int, Booking>.Create(Booking obj)
         {
             throw new NotImplementedException();
         }
 
-        bool IRepo<Hotel, int, Hotel>.Delete(int id)
+        bool IRepo<Booking, int, Booking>.Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        List<Type> IRepo<Hotel, int, Hotel>.Read()
+        List<Type> IRepo<Booking, int, Booking>.Read()
         {
             throw new NotImplementedException();
         }
 
-        Type IRepo<Hotel, int, Hotel>.Read(int id)
+        Type IRepo<Booking, int, Booking>.Read(int id)
         {
             throw new NotImplementedException();
         }
 
-        Hotel IRepo<Hotel, int, Hotel>.Update(Type obj)
+        Booking IRepo<Booking, int, Booking>.Update(Type obj)
         {
             throw new NotImplementedException();
         }

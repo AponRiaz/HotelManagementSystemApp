@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class StaffRepo : Repo, IRepo<Staff, int, Staff>
+    internal class RoomRepo : Repo, IRepo<Room, int, Room>
     {
-        public Staff Create(Staff obj)
+        public Room Create(Room obj)
         {
-            db.Staffs.Add(obj);
+            db.Rooms.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
@@ -20,42 +20,51 @@ namespace DAL.Repos
         public bool Delete(int id)
         {
             var ex = Read(id);
-            db.Staffs.Remove(ex);
+            db.Rooms.Remove(ex);
             return db.SaveChanges() > 0;
         }
 
-        public List<Staff> Read()
+        public List<Room> Read()
         {
-            return db.Staffs.ToList();
+            return db.Rooms.ToList();
         }
 
-        public Staff Read(int id)
+        public Room Read(int id)
         {
-            return db.Staffs.Find(id);
+            return db.Rooms.Find(id);
         }
 
-        public Staff Update(Staff obj)
+        public Room Update(Room obj)
         {
-            var ex = Read(obj.StaffID);
+            var ex = Read(obj.RoomID);// Update 
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
 
-        public Staff Update(Type obj)
+        Room IRepo<Room, int, Room>.Create(Room obj)
         {
             throw new NotImplementedException();
         }
 
-        List<Type> IRepo<Staff, int, Staff>.Read()
+        bool IRepo<Room, int, Room>.Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        Type IRepo<Staff, int, Staff>.Read(int id)
+        List<Type> IRepo<Room, int, Room>.Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        Type IRepo<Room, int, Room>.Read(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Room IRepo<Room, int, Room>.Update(Type obj)
         {
             throw new NotImplementedException();
         }
     }
-
 }

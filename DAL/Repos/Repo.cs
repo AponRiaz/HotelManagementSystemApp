@@ -13,8 +13,7 @@ namespace DAL.Repos
 
         internal Repo()
         {
-            db = new HMS
-
+            db = new HMSContext();
         }
     }
 }
