@@ -52,6 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\BookingDTO.cs" />
+    <Compile Include="DTOs\GuestDTO.cs" />
+    <Compile Include="DTOs\HotelDTO.cs" />
+    <Compile Include="DTOs\PaymentDTO.cs" />
+    <Compile Include="DTOs\RoomDTO.cs" />
+    <Compile Include="DTOs\RoomTypeDTO.cs" />
+    <Compile Include="DTOs\StaffDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
