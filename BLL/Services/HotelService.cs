@@ -1,4 +1,5 @@
 ﻿using BLL.DTOs;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace BLL.Services
         public static List<HotelDTO> Get()
         {
             var data = DataAccessFactory.HotelData().Read();
+
 
         }
         }
