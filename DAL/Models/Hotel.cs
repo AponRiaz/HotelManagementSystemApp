@@ -34,13 +34,19 @@ namespace DAL.Models
         public DateTime CheckoutTime { get; set; }
 
 
+        /*      public virtual ICollection<Staff> Hotels { get; set; }
+
+              public Hotel()
+              {
+                  Hotels = new List<Staff>();
+              }
+      */
         public virtual ICollection<Room> Hotels { get; set; }
 
         public Hotel()
         {
             Hotels = new List<Room>();
         }
-
 
 
     }

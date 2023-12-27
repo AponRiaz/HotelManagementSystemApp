@@ -43,30 +43,5 @@ namespace DAL.Repos
             return null;
 
         }
-
-        Booking IRepo<Booking, int, Booking>.Create(Booking obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IRepo<Booking, int, Booking>.Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<Booking, int, Booking>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<Booking, int, Booking>.Read(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        Booking IRepo<Booking, int, Booking>.Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

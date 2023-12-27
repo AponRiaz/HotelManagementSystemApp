@@ -42,19 +42,5 @@ namespace DAL.Repos
             return null;
         }
 
-        public RoomType Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<RoomType, int, RoomType>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<RoomType, int, RoomType>.Read(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

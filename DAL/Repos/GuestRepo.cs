@@ -43,29 +43,6 @@ namespace DAL.Repos
             return null;
         }
 
-        Guest IRepo<Guest, int, Guest>.Create(Guest obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IRepo<Guest, int, Guest>.Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<Guest, int, Guest>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<Guest, int, Guest>.Read(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        Guest IRepo<Guest, int, Guest>.Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

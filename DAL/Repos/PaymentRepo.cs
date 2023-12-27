@@ -42,29 +42,5 @@ namespace DAL.Repos
             return null;
         }
 
-        Payment IRepo<Payment, int, Payment>.Create(Payment obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IRepo<Payment, int, Payment>.Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<Payment, int, Payment>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<Payment, int, Payment>.Read(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        Payment IRepo<Payment, int, Payment>.Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -42,29 +42,5 @@ namespace DAL.Repos
             return null;
         }
 
-        Room IRepo<Room, int, Room>.Create(Room obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IRepo<Room, int, Room>.Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<Room, int, Room>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<Room, int, Room>.Read(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        Room IRepo<Room, int, Room>.Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

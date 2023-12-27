@@ -42,20 +42,6 @@ namespace DAL.Repos
             return null;
         }
 
-        public Staff Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<Staff, int, Staff>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<Staff, int, Staff>.Read(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }
