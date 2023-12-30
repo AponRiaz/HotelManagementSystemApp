@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DataAccessFactory
     {
-        public static IRepo<Hotel, int, Hotel> HotelData()
+        public static IRepo<Hotel,int, Hotel> HotelData()
         {
             return new HotelRepo();
         }

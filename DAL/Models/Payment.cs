@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Payment
+   public class Payment
     {
         [Key]
         public int PaymentID { get; set; }
-
+       
         [ForeignKey("Booking")]
         public int BookingID { get; set; }
 

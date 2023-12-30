@@ -9,11 +9,21 @@ namespace BLL.DTOs
 {
     public class RoomDTO
     {
+     
         public int RoomID { get; set; }
+
+      
         public int HotelID { get; set; }
+
+
+
+       
         public int TypeID { get; set; }
+
+
         [Required]
-        public string status { get; set; }
+        public string Status { get; set; }
+
 
     }
 }

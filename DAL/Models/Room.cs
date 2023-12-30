@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Room
+   public class Room
     {
         [Key]
         public int RoomID { get; set; }
@@ -16,11 +16,11 @@ namespace DAL.Models
         [ForeignKey("Hotel")]
         public int HotelID { get; set; }
 
-
+       
 
         [ForeignKey("RoomType")]
         public int TypeID { get; set; }
-
+       
 
         [Required]
         public string Status { get; set; }

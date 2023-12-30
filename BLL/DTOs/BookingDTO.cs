@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class BookingDTO
+   public class BookingDTO
     {
-        public int BookingID { get; set; } 
+       
+        public int BookingID { get; set; }
         public int RoomID { get; set; }
         public int GuestID { get; set; }
-        public DateTime CheckTime { get; set; }
+        public DateTime CheckinTime { get; set; }
         public DateTime CheckoutTime { get; set; }
-        [Required]
+       [Required]
         public string TotalPrice { get; set; }
-
 
     }
 }

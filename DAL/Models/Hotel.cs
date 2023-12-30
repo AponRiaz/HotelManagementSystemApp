@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Hotel
+   public class Hotel
     {
         [Key]
         public int HotelID { get; set; }
@@ -34,19 +34,20 @@ namespace DAL.Models
         public DateTime CheckoutTime { get; set; }
 
 
-        /*      public virtual ICollection<Staff> Hotels { get; set; }
+  /*      public virtual ICollection<Staff> Hotels { get; set; }
 
-              public Hotel()
-              {
-                  Hotels = new List<Staff>();
-              }
-      */
+        public Hotel()
+        {
+            Hotels = new List<Staff>();
+        }
+*/
         public virtual ICollection<Room> Hotels { get; set; }
 
         public Hotel()
         {
             Hotels = new List<Room>();
         }
+
 
 
     }

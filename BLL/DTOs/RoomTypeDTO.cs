@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class RoomTypeDTO
+   public class RoomTypeDTO
     {
+        
         public int TypeID { get; set; }
 
         [Required]

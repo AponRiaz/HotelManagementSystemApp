@@ -37,7 +37,7 @@ namespace DAL.Repos
 
         public Booking Update(Booking obj)
         {
-            var ex = Read(obj.BookingID);
+            var ex = Read(obj.BookingID);// Update 
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;

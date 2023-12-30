@@ -5,34 +5,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BB7FBF48-1B3F-4CA1-B6E4-102FB08BC6A0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{63639C58-BF27-4367-8C7F-5EC40A0264F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
     <AssemblyName>DAL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -42,7 +26,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -69,13 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202312241454475_initDB.cs" />
-    <Compile Include="Migrations\202312241454475_initDB.designer.cs">
-      <DependentUpon>202312241454475_initDB.cs</DependentUpon>
+    <Compile Include="Migrations\202312241336559_initDB.cs" />
+    <Compile Include="Migrations\202312241336559_initDB.designer.cs">
+      <DependentUpon>202312241336559_initDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312241511448_initialDB.cs" />
-    <Compile Include="Migrations\202312241511448_initialDB.designer.cs">
-      <DependentUpon>202312241511448_initialDB.cs</DependentUpon>
+    <Compile Include="Migrations\202312241351435_initDBall.cs" />
+    <Compile Include="Migrations\202312241351435_initDBall.designer.cs">
+      <DependentUpon>202312241351435_initDBall.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Booking.cs" />
@@ -86,8 +69,6 @@
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomType.cs" />
     <Compile Include="Models\Staff.cs" />
-    <Compile Include="DataAccessFactory.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\BookingRepo.cs" />
     <Compile Include="Repos\GuestRepo.cs" />
     <Compile Include="Repos\HotelRepo.cs" />
@@ -96,31 +77,20 @@
     <Compile Include="Repos\RoomRepo.cs" />
     <Compile Include="Repos\RoomTypeRepo.cs" />
     <Compile Include="Repos\StaffRepo.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202312241336559_initDB.resx">
+      <DependentUpon>202312241336559_initDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312241351435_initDBall.resx">
+      <DependentUpon>202312241351435_initDBall.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312241454475_initDB.resx">
-      <DependentUpon>202312241454475_initDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312241511448_initialDB.resx">
-      <DependentUpon>202312241511448_initialDB.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

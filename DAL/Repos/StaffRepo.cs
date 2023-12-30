@@ -36,12 +36,11 @@ namespace DAL.Repos
 
         public Staff Update(Staff obj)
         {
-            var ex = Read(obj.StaffID);
+            var ex = Read(obj.StaffID);// Update 
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
-
     }
-
+   
 }

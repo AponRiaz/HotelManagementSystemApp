@@ -21,7 +21,7 @@
             for (int i = 1; i <= 10; i++)
             {
                 context.Hotels.Add(new Models.Hotel
-                {
+                {    
                     HotelID = i,
                     UserName = "User-" + i,
                     Password = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
@@ -32,13 +32,13 @@
                     Phone = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
                     Email = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
                     Stars = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
-                    CheckinTime = DateTime.Now,
-                    CheckoutTime = DateTime.Now,
-
+                    CheckinTime =DateTime.Now,
+                    CheckoutTime= DateTime.Now,
+                 
 
                 });
 
-
+     
             }
 
 
@@ -47,10 +47,10 @@
             {
 
                 context.Staffs.Add(new Models.Staff
-
+             
                 {
                     StaffID = i,
-                    HotelID = random.Next(1, 11),
+                    HotelID = random.Next(1,11),
                     FirstName = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
                     LastName = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
                     Position = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
@@ -109,7 +109,7 @@
             }
 
 
-            // Random random = new Random();
+           // Random random = new Random();
             for (int i = 1; i <= 30; i++)
             {
 
@@ -151,7 +151,7 @@
             {
                 context.Payments.Add(new Models.Payment
                 {
-                    PaymentID = i,
+                    PaymentID=i,
                     BookingID = random.Next(1, 15),
                     Amount = Guid.NewGuid().ToString().Substring(0, Math.Min(10, Guid.NewGuid().ToString().Length)),
                     PaymentDate = DateTime.Now,
@@ -170,4 +170,5 @@
 
         }
     }
-}
+    }
+

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class RoomType
+   public class RoomType
     {
         [Key]
         public int TypeID { get; set; }

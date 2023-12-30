@@ -9,8 +9,9 @@ namespace BLL.DTOs
 {
     public class StaffDTO
     {
+        
         public int StaffID { get; set; }
-
+       
         public int HotelID { get; set; }
 
         [Required]
@@ -36,5 +37,6 @@ namespace BLL.DTOs
 
         [Required]
         public DateTime HireDate { get; set; }
+
     }
 }

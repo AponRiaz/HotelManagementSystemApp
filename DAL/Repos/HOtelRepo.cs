@@ -39,7 +39,7 @@ namespace DAL.Repos
 
         public Hotel Update(Hotel obj)
         {
-            var ex = Read(obj.HotelID); 
+            var ex = Read(obj.HotelID);// Update 
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
